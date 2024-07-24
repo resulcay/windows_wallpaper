@@ -115,13 +115,16 @@ class Tile extends StatelessWidget {
       },
       child: Hero(
         tag: index,
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Image.network(
-            photo.urls.thumb.toString(),
-            fit: BoxFit.cover,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Image.network(
+              photo.urls.thumb.toString(),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),
@@ -206,13 +209,16 @@ class ImageDetailWidget extends StatelessWidget {
           children: [
             Hero(
               tag: index,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Image.network(
-                  url,
-                  fit: BoxFit.cover,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.network(
+                    url,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
